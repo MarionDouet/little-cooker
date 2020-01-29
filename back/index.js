@@ -16,12 +16,44 @@ app.post('/littlecooker/recipe', (req, res) => {
   const formData = req.body;
   connection.query('INSERT INTO recipe SET ?', formData, err => {
     if (err) {
+      console.log(err)
       res.status(500).send('Erreur');
     } else {
       res.status(201).send('recipe created');
     }
   });
 });
+
+app.get('/littlecooker/recipe', (req, res) => {
+  connection.query('SELECT * from recipe', (err, results) => {
+    if (err) {
+      res.status(500).send('Erreur');
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+app.get('/littlecooker/recipe/dessert', (req, res) => {
+  connection.query('SELECT * from recipe WHERE id_type = 3', (err, results) => {
+    if (err) {
+      res.status(500).send('Erreur');
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+app.get('/littlecooker/recipe/meal', (req, res) => {
+  connection.query('SELECT * from recipe WHERE id_type = 2', (err, results) => {
+    if (err) {
+      res.status(500).send('Erreur');
+    } else {
+      res.json(results);
+    }
+  });
+});
+
 
 app.post('/littlecooker/type', (req, res) => {
   const formData = req.body;
