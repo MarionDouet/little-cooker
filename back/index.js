@@ -34,6 +34,16 @@ app.get('/littlecooker/recipe', (req, res) => {
   });
 });
 
+app.get('/littlecooker/recipe/dessert', (req, res) => {
+  connection.query('SELECT * from recipe WHERE id_type = 3', (err, results) => {
+    if (err) {
+      res.status(500).send('Erreur');
+    } else {
+      res.json(results);
+    }
+  });
+});
+
 app.post('/littlecooker/type', (req, res) => {
   const formData = req.body;
   connection.query('INSERT INTO type SET ?', formData, err => {

@@ -103,17 +103,6 @@ class FormRecipe extends Component {
                 required
               />
             </label>
-            <label htmlFor="instructions" className="form-type">
-              <textarea
-                type="text"
-                id="instructions"
-                name="instructions"
-                value={instructions}
-                onChange={this.handleChange}
-                placeholder="Instructions"
-                required
-              />
-            </label>
             <label htmlFor="ingredients" className="form-type">
               <textarea
                 type="text"
@@ -122,6 +111,17 @@ class FormRecipe extends Component {
                 value={ingredients}
                 onChange={this.handleChange}
                 placeholder="Ingrédients"
+                required
+              />
+            </label>
+            <label htmlFor="instructions" className="form-type">
+              <textarea
+                type="text"
+                id="instructions"
+                name="instructions"
+                value={instructions}
+                onChange={this.handleChange}
+                placeholder="Instructions"
                 required
               />
             </label>
