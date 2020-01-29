@@ -3,7 +3,7 @@ import RecipeList from './RecipeList'
 import axios from 'axios';
 
 
-class ShowDessert extends Component {
+class ShowMeal extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +18,7 @@ class ShowDessert extends Component {
 
   getData() {
     axios
-    .get('/littlecooker/recipe/dessert')
+    .get('/littlecooker/recipe/meal')
       .then(res => res.data)
       .then(data => this.setState({ recipes: data }));
   }
@@ -33,4 +33,4 @@ class ShowDessert extends Component {
   }
 }
 
-export default ShowDessert;
+export default ShowMeal;

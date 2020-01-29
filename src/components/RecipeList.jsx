@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DessertList = props => {
+const RecipeList = props => {
   return props.recipes.map (recipe =>{
     return (
       <div>
@@ -11,4 +11,4 @@ const DessertList = props => {
   })
 };
 
-export default DessertList;
+export default RecipeList;
