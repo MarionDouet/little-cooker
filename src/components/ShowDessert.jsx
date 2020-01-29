@@ -31,6 +31,6 @@ class ShowDessert extends Component {
         </div>
       );
   }
-}
+};
 
 export default ShowDessert;
