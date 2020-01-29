@@ -15,9 +15,11 @@ class HomePage extends Component {
     
     return (
       <div className="">
-        <Link to='/formrecipe'><p>bla</p></Link>
-        <Link to='/meal'><p>Plat</p></Link>
-        <Link to='/dessert'><p>Dessert</p></Link>
+        <Link to='/formrecipe'><p>Nouvelle recette</p></Link>
+        <h3>Je veux cuisiner ...</h3>
+        <Link to='/entree'><p>Une entrée</p></Link>
+        <Link to='/meal'><p>Un plat</p></Link>
+        <Link to='/dessert'><p>un dessert</p></Link>
       </div>
     );
   }
