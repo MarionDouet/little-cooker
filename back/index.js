@@ -64,6 +64,18 @@ app.get('/littlecooker/recipe/entree', (req, res) => {
   });
 });
 
+app.get('/littlecooker/recipe/:id', (req, res) => {
+  const { id } = req.params
+  connection.query('SELECT * from recipe WHERE id = ?',[id], (err, results) => {
+    if (err) {
+      res.status(500).send('Erreur');
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+
 
 app.post('/littlecooker/type', (req, res) => {
   const formData = req.body;

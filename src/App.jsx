@@ -6,6 +6,7 @@ import ShowMeal from './components/ShowMeal'
 import ShowEntree from './components/ShowEntree'
 import './App.css';
 import HomePage from './components/Homepage';
+import RecipeCard from './components/RecipeCard';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/entree" component={ShowEntree} />
       <Route path="/meal" component={ShowMeal} />
       <Route path="/dessert" component={ShowDessert} />
+      <Route path="/recipe/:id" component={RecipeCard} />
     </div>
   );
 }

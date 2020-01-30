@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import RecipeList from './RecipeList'
 import axios from 'axios';
 
 
-class ShowDessert extends Component {
+class RecipeCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipes: [],
+      recipe: [],
     };
     this.getData = this.getData.bind(this);
   }
@@ -18,7 +17,7 @@ class ShowDessert extends Component {
 
   getData() {
     axios
-    .get('/littlecooker/recipe/dessert')
+    .get('/littlecooker/recipe/:id')
       .then(res => res.data)
       .then(data => this.setState({ recipes: data }));
   }
@@ -27,11 +26,10 @@ class ShowDessert extends Component {
     const { recipes } = this.state;
       return (
         <div className="">
-          <h2>Desserts</h2>
-          <RecipeList recipes={recipes}/>
+          <p>{recipes.name}</p>
         </div>
       );
   }
 }
 
-export default ShowDessert;
+export default RecipeCard;

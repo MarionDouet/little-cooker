@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:700|Montserrat&display=swap');
+
+*{
+  font-family: 'Dosis', sans-serif;
+}
+
+.container-connexion{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.choice-container{
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0  
+}
+
+.home-connexion {
+  margin: 0;
+  color: black;
+}
+.choice-container{
+  padding-bottom: 30px
+}
+
+.choice-container p {
+  color: white;
+  padding: 20px 50px;
+  margin: 20px 0;
+  font-size: 1.5em
+}
+
+.home-text {
+  font-size: 2.5em;
+  padding-bottom: 40px;
+  color: white
+}
+
+.choice-container a {
+  text-decoration: none
+}
+
+.homepage-container {
+  background-image: url(../image/background-cloud.jpg);
+}
+
+.img-salade {
+  width: 6em;
+  background: radial-gradient(#82b1e3, #9ae7e8, white);
+  padding: 20px;
+  border-radius: 50%
+}
+
+.logo-home {
+  width: 13em;
+  padding: 180px 0 30px 0
+}
+
+

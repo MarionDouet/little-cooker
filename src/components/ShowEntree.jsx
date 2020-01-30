@@ -27,6 +27,7 @@ class ShowEntree extends Component {
     const { recipes } = this.state;
       return (
         <div className="">
+          <h2>Entrées</h2>
           <RecipeList recipes={recipes}/>
         </div>
       );
