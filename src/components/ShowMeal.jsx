@@ -27,6 +27,7 @@ class ShowMeal extends Component {
     const { recipes } = this.state;
       return (
         <div className="">
+          <h2>Plats</h2>
           <RecipeList recipes={recipes}/>
         </div>
       );
