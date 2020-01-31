@@ -1,0 +1,18 @@
+body {
+  background-image: url(../image/background-cloud.jpg);
+  background-attachment: fixed;
+}
+.recipe-type-title {
+  font-size: 5em;
+  color: white
+}
+
+.recipe-type-container {
+  margin-top: 250px
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .recipe-type-title {
+    font-size: 3em;
+  }
+}

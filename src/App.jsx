@@ -7,6 +7,7 @@ import ShowEntree from './components/ShowEntree'
 import './App.css';
 import HomePage from './components/Homepage';
 import RecipeCard from './components/RecipeCard';
+import AllRecipe from './components/AllRecipe';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/meal" component={ShowMeal} />
       <Route path="/dessert" component={ShowDessert} />
       <Route path="/recipe/:id" component={RecipeCard} />
+      <Route path="/moderate/recipe" component={AllRecipe}/>
     </div>
   );
 }

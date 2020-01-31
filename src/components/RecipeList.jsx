@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './recipeList.css'
+
 const RecipeList = props => {
   return props.recipes.map (recipe =>{
     const recipeId = recipe.id
-    return (
-      <Link to={`/recipe/:${recipeId}`}>
-        <div>
-          <img src={recipe.image} alt=""/>
-          <p>{recipe.name}</p>
-        </div>
-      </Link>
+    return ( 
+      <Link to={`/recipe/${recipeId}`}>
+        <div className="container-list">
+          <img className="img-recipe" src={recipe.image} alt=""/> 
+          <p className="name-recipe">{recipe.name}</p>    
+        </div> 
+      </Link>  
     )
   })
 };

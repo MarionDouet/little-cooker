@@ -75,6 +75,28 @@ app.get('/littlecooker/recipe/:id', (req, res) => {
   });
 });
 
+app.delete('/littlecooker/recipe/:id', (req, res) => {
+  const { id } = req.params;
+  connection.query(`DELETE FROM recipe WHERE id = ${id}`, err => {
+    if (err) {
+      res.status(500).send('Erreur');
+    } else {
+      res.status(201).send(`La recette est supprimée`);
+    }
+  });
+});
+
+app.put('/littlecooker/recipe/:id', (req, res) => {
+  const { id } = req.params.id;
+  const formData = req.body;
+  connection.query(`UPDATE recipe SET ? WHERE id = ${id}`, [formData, id], err => {
+    if (err) {
+      res.status(500).send(`Erreur`);
+    } else {
+      res.status(200).send(`Modif effectuées`);
+    }
+  });
+});
 
 
 app.post('/littlecooker/type', (req, res) => {

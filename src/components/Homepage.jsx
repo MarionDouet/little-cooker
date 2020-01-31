@@ -5,6 +5,7 @@ import logo from '../image/logo-cooker.png';
 import plat from '../image/plat.png';
 import dessert from '../image/dessert.png';
 import entree from '../image/salade.png';
+import chief from '../image/chief.png'
 
 class HomePage extends Component {
   constructor(props) {
@@ -19,9 +20,9 @@ class HomePage extends Component {
     return (
       <div className="homepage-container">
         <div classname="container-connexion">
-          <NavLink to='/formrecipe'><p className="home-connexion">Connexion</p></NavLink>
+          <NavLink to='/formrecipe'><img className="home-connexion" src={chief}/></NavLink>
         </div>
-        <img className ="logo-home" src={logo} alt=""/>
+        <img className ="logo-homepage" src={logo} alt=""/>
         <h3 className="home-text">Je veux cuisiner ...</h3>
         <div className="choice-container">
           <NavLink to='/entree'>
@@ -36,8 +37,7 @@ class HomePage extends Component {
             <img className= "img-salade" src={dessert} alt=""/>
             <p>Un dessert</p>
           </NavLink>
-        </div>
-        
+        </div>   
       </div>
     );
   }
