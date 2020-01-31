@@ -1,0 +1,53 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0px auto
+}
+
+.form-container input, textarea {
+  width: 70%;
+  margin: 10px auto
+}
+
+.form-container textarea {
+  border-radius: 5px;
+  padding: 0 4px
+}
+
+.container-admin {
+ margin: 210px auto
+}
+
+.admin-title {
+  font-size: 3em;
+  color: white
+}
+
+.link-logo {
+  width: 7em;
+  margin-top: 50px
+}
+
+.link-logo-home {
+  width: 4em;
+  margin: 50px 0
+}
+
+@media (min-width: 360px) and (max-width: 480px) { 
+  .form-container {
+    width: 90%
+  }
+
+  .form-container input, textarea{
+    width: 90%
+  }
+
+  .link-logo {
+    width: 5em;
+  }
+
+  .link-logo-home {
+    width: 5em;
+  }
+}

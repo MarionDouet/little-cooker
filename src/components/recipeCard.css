@@ -1,0 +1,42 @@
+.recipe-card-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 200px auto 0 auto;
+  color:white
+}
+
+.recipe-card-photo img{
+  width: 25em;
+  border-radius: 15px
+}
+
+.recipe-card-name {
+  font-size: 5em
+}
+
+.recipe-card-nb {
+  align-self: flex-start;
+  font-size: 2em
+}
+
+.recipe-card-ingredients, .recipe-card-instructions{
+  text-align: justify;
+  line-height: 30px
+}
+
+.logo-home{
+  width: 3em;
+}
+
+@media (min-width: 360px) and (max-width: 480px){
+  .recipe-card-container {
+    width: 80%
+  }
+
+  .recipe-card-name {
+    font-size: 3em
+  }
+}

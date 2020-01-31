@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import RecipeList from './RecipeList'
+import RecipeList from './RecipeList';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import './showEntree.css';
+import logo from '../image/logo-cooker.png';
+import home from '../image/home.png'
 
 class ShowDessert extends Component {
   constructor(props) {
@@ -26,9 +29,11 @@ class ShowDessert extends Component {
   render() {
     const { recipes } = this.state;
       return (
-        <div className="">
-          <h2>Desserts</h2>
+        <div className="recipe-type-container">
+          <Link to="/"><img className="link-logo" src={logo} alt=""/></Link>
+          <h2 className="recipe-type-title">Desserts</h2>
           <RecipeList recipes={recipes}/>
+          <Link to="/"><img className="link-logo-home" src={home} alt=""/></Link>
         </div>
       );
   }

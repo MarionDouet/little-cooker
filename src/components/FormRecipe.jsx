@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
+import logo from '../image/logo-cooker.png'
+import home from '../image/home.png'
+import './formRecipe.css'
 
 class FormRecipe extends Component {
   constructor(props) {
@@ -11,17 +15,33 @@ class FormRecipe extends Component {
       instructions: '',
       ingredients: '',
       id_type: null,
+      nbRecipe: null
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.getNbRecipe = this.getNbRecipe.bind(this);
   }
 
-  
+  componentDidUpdate() {
+    this.getNbRecipe()
+
+  }
+
+  componentDidMount(){
+    this.getNbRecipe()
+  }
 
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value
     });
+  }
+
+  getNbRecipe() {
+    axios
+    .get('/littlecooker/recipe')
+      .then(res => res.data)
+      .then(data => this.setState({ nbRecipe: data.length }));
   }
 
   
@@ -54,10 +74,14 @@ class FormRecipe extends Component {
       instructions,
       ingredients,
       id_type,
+      nbRecipe
     } = this.state;
 
     return (
-      <div>
+      
+      <div className="container-admin">
+        <Link to="/"><img className="link-logo" src={logo} alt=""/></Link>
+        <h1 className="admin-title">Ajouter une recette</h1>
         <form onSubmit={this.handleSubmit} className="form-container">
             <label htmlFor="name" className="form-name">
               <input
@@ -108,6 +132,7 @@ class FormRecipe extends Component {
                 type="text"
                 id="ingredients"
                 name="ingredients"
+                rows="5"
                 value={ingredients}
                 onChange={this.handleChange}
                 placeholder="Ingrédients"
@@ -119,6 +144,7 @@ class FormRecipe extends Component {
                 type="text"
                 id="instructions"
                 name="instructions"
+                rows="5"
                 value={instructions}
                 onChange={this.handleChange}
                 placeholder="Instructions"
@@ -127,6 +153,9 @@ class FormRecipe extends Component {
             </label>
             <input type="submit" value="enregistrer" />
         </form>
+        <h3>{nbRecipe} recettes</h3>
+        <Link to="/moderate/recipe"><h3>Modérer</h3></Link>
+        <Link to="/"><img className="link-logo-home" src={ home } alt=""/></Link>
       </div>
     );
   }
