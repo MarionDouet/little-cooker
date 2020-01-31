@@ -19,22 +19,22 @@ class HomePage extends Component {
     
     return (
       <div className="homepage-container">
-        <div classname="container-connexion">
-          <NavLink to='/formrecipe'><img className="home-connexion" src={chief}/></NavLink>
+        <div className="container-connexion">
+          <NavLink to='/formrecipe'><img className="home-connexion" src={chief} alt="admin"/></NavLink>
         </div>
-        <img className ="logo-homepage" src={logo} alt=""/>
+        <img className ="logo-homepage" src={logo} alt="logo"/>
         <h3 className="home-text">Je veux cuisiner ...</h3>
         <div className="choice-container">
           <NavLink to='/entree'>
-            <img className= "img-salade" src={entree} alt=""/>
+            <img className= "img-salade" src={entree} alt="logo"/>
             <p>Une entrée</p>
           </NavLink>
           <NavLink to='/meal'>
-            <img className= "img-salade" src={plat} alt=""/>
+            <img className= "img-salade" src={plat} alt="logo"/>
             <p>Un plat</p>
           </NavLink>
           <NavLink to='/dessert'>
-            <img className= "img-salade" src={dessert} alt=""/>
+            <img className= "img-salade" src={dessert} alt="logo"/>
             <p>Un dessert</p>
           </NavLink>
         </div>   
