@@ -8,7 +8,7 @@ const RecipeList = props => {
     const recipeId = recipe.id
     return ( 
       <Link to={`/recipe/${recipeId}`}>
-        <div className="container-list">
+        <div className="container-list" key={recipe.id}>
           <img className="img-recipe" src={recipe.image} alt=""/> 
           <p className="name-recipe">{recipe.name}</p>    
         </div> 

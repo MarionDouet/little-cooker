@@ -32,7 +32,7 @@ class ShowDessert extends Component {
         <div className="recipe-type-container">
           <Link to="/"><img className="link-logo" src={logo} alt=""/></Link>
           <h2 className="recipe-type-title">Desserts</h2>
-          <RecipeList recipes={recipes}/>
+          <RecipeList recipes={recipes} key={recipes.id}/>
           <Link to="/"><img className="link-logo-home" src={home} alt=""/></Link>
         </div>
       );

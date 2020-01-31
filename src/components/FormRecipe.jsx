@@ -83,7 +83,8 @@ class FormRecipe extends Component {
         <Link to="/"><img className="link-logo" src={logo} alt=""/></Link>
         <h1 className="admin-title">Ajouter une recette</h1>
         <form onSubmit={this.handleSubmit} className="form-container">
-            <label htmlFor="name" className="form-name">
+            <label htmlFor="name" className="form-label">
+              Nom de la recette:
               <input
                 type="text"
                 id="name"
@@ -94,7 +95,8 @@ class FormRecipe extends Component {
                 required
               />
             </label>
-            <label htmlFor="image" className="form-image">
+            <label htmlFor="image" className="form-label">
+              URL de l'image:
               <input
                 type="text"
                 id="image"
@@ -105,7 +107,8 @@ class FormRecipe extends Component {
                 required
               />
             </label>
-            <label htmlFor="nbPerson" className="form-nb">
+            <label htmlFor="nbPerson" className="form-label">
+              Nombre de personnes:
               <input
                 type="text"
                 id="nb_person"
@@ -116,7 +119,8 @@ class FormRecipe extends Component {
                 required
               />
             </label>
-            <label htmlFor="type" className="form-type">
+            <label htmlFor="type" className="form-label">
+              Type de recette
               <input
                 type="text"
                 id="id_type"
@@ -127,7 +131,8 @@ class FormRecipe extends Component {
                 required
               />
             </label>
-            <label htmlFor="ingredients" className="form-type">
+            <label htmlFor="ingredients" className="form-label">
+              Ingrédients
               <textarea
                 type="text"
                 id="ingredients"
@@ -139,7 +144,8 @@ class FormRecipe extends Component {
                 required
               />
             </label>
-            <label htmlFor="instructions" className="form-type">
+            <label htmlFor="instructions" className="form-label">
+              Instructions
               <textarea
                 type="text"
                 id="instructions"
