@@ -1,4 +1,4 @@
-# Little Cooker : application de recette destinée aux enfants
+# Little Cooker : application de recettes destinée aux enfants
 
 ## Checkpoint 4
 
